@@ -6,13 +6,13 @@ class CreateJobs < ActiveRecord::Migration[7.0]
       t.string :company
       t.string :location
       t.float :salary
-      t.string :type
+      t.string :category
       t.references :employer, null: false, foreign_key: true
 
       t.timestamps
     end
     add_index :jobs, :title 
     add_index :jobs, :location 
-    add_index :jobs, :type
+    add_index :jobs, :category
   end
 end
