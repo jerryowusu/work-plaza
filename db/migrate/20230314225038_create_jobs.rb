@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateJobs < ActiveRecord::Migration[7.0]
   def change
     create_table :jobs do |t|
@@ -11,8 +13,8 @@ class CreateJobs < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
-    add_index :jobs, :title 
-    add_index :jobs, :location 
+    add_index :jobs, :title
+    add_index :jobs, :location
     add_index :jobs, :category
   end
 end
